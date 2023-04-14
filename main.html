@@ -1,16 +1,28 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-	<link rel="stylesheet" href="styles.css">
+	<title>Browser Information</title>
+	<style>
+		#browser-info {
+			background-color: #f5f5f5;
+			border: 1px solid #ddd;
+			padding: 10px;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+		}
+	</style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+	<div id="browser-info"></div>
 
+	<script>
+		// get the user's browser name and version
+		var browserName = navigator.appName;
+		var version = navigator.appVersion;
+
+		// display the information on the page
+		var browserInfo = document.getElementById("browser-info");
+		browserInfo.innerHTML = "You are using " + browserName + " version " + version;
+	</script>
 </body>
-
 </html>
